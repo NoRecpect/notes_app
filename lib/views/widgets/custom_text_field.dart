@@ -15,6 +15,7 @@ class CustomFormTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: TextStyle(color: Colors.white),
       validator: (value) {
         if (value?.isEmpty ?? true) {
           return "field must have data";
@@ -22,6 +23,7 @@ class CustomFormTextField extends StatelessWidget {
           return null;
         }
       },
+
       onSaved: onSaved,
       maxLines: maxLines,
       cursorColor: kPrimaryColor,
